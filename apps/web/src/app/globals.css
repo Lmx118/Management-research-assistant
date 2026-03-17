@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-paper text-ink antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(159, 122, 67, 0.12), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(102, 131, 110, 0.14), transparent 28%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+}
+
+a {
+  @apply transition-colors duration-150;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.app-panel {
+  @apply rounded-3xl border border-ink/10 bg-cloud/90 shadow-panel backdrop-blur;
+}
+
+.field {
+  @apply w-full rounded-2xl border border-ink/15 bg-white/80 px-4 py-3 text-sm text-ink outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20;
+}
+
+.label {
+  @apply mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-slate;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-cloud transition hover:bg-slate disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/70 px-5 py-3 text-sm font-semibold text-ink transition hover:border-ink/30 hover:bg-white;
+}
